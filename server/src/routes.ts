@@ -1,15 +1,14 @@
 import {Router} from "express";
-import multer from 'multer';
+import multer   from 'multer';
 
-import uploadConfig from './config/upload';
+import uploadConfig        from './config/upload';
 import OrphanageController from './controller/OrphanageController';
 
 import {CreateOrphanateValidator, ShowOrphanateValidator} from './validators/OrphanateValidator';
 
-const upload = multer(uploadConfig);
-
 const orphanageController = new OrphanageController();
 const routes              = Router();
+const upload              = multer(uploadConfig);
 
 routes.get('/orphanage', orphanageController.index);
 routes.get('/orphanage/:id', ShowOrphanateValidator, orphanageController.show);

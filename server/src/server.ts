@@ -1,12 +1,14 @@
+import dotenv  from 'dotenv';
 import express from 'express';
-import 'express-async-errors';
-import Routes from './routes';
-import cors from 'cors';
+import path    from "path";
+import cors    from 'cors';
+dotenv.config();
 
 import ErrorHandler from './error/handler';
+import Routes       from './routes';
 
+import 'express-async-errors';
 import './db/connection';
-import path from "path";
 
 const app = express();
 app.use(cors());
@@ -15,4 +17,4 @@ app.use(Routes);
 app.use('/upload', express.static(path.join(__dirname, '..', 'upload')))
 app.use(ErrorHandler);
 
-app.listen(3333);
+app.listen(process.env.HTTP_PORT);

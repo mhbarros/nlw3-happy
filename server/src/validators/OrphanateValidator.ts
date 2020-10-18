@@ -1,16 +1,4 @@
-import {body, param, check} from "express-validator";
-
-/**
- * {
-	"name": "Lar do Marcelo",
-	"latitude": -22.9327058,
-	"longitude": -43.1844011,
-	"about": "Marcelo mora aqui",
-	"instructions": "Venha nos visitar aos sábados.",
-	"opening_hours": "Qualquer hora !",
-	"open_on_weekends": true
-}
- */
+import {body, param} from "express-validator";
 
 const CreateOrphanateValidator = [
   body('name')
