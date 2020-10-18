@@ -18,7 +18,7 @@ function App() {
                     <strong>Rio de Janeiro</strong>
                     <span>RJ</span>
                 </div>
-                <Link to={'/app'} className={'enter-app'}>
+                <Link to={'/home'} className={'enter-app'}>
                     <FiArrowRight size={26} color={'rgba(0,0,0,0.6)'}/>
                 </Link>
             </div>
