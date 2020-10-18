@@ -1,8 +1,9 @@
 import express from 'express';
+import 'express-async-errors';
 import Routes from './routes';
 import cors from 'cors';
 
-import ErrorHandler from './errors/handler';
+import ErrorHandler from './error/handler';
 
 import './db/connection';
 import path from "path";
