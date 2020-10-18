@@ -9,12 +9,7 @@ import MapMarker from "../utils/MapMarker";
 import '../css/home.css';
 import Api from "../services/api";
 
-interface Orphanage {
-  id: number,
-  name: string
-  latitude: number,
-  longitude: number,
-}
+import Orphanage from "../interfaces/Orphanage";
 
 const Home = () => {
 
